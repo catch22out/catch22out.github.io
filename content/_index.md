@@ -15,16 +15,16 @@ sections:
       username: admin
       text: ""
       # Show a call-to-action button under your biography? (optional)
-      button:
-        text: Download CV
-        url: uploads/resume.pdf
+      # button:
+      #   text: Download CV
+      #   url: uploads/resume.pdf
     design:
       css_class: dark
       background:
         color: black
         image:
           # Add your image background to `assets/media/`.
-          filename: stacked-peaks.svg
+          filename: visionlogo.png
           filters:
             brightness: 1.0
           size: cover
@@ -32,30 +32,31 @@ sections:
           parallax: false
   - block: markdown
     content:
-      title: '📚 My Research'
+      title: 'Introduction'
       subtitle: ''
       text: |-
-        Use this area to speak to your mission. I'm a research scientist in the Moonshot team at DeepMind. I blog about machine learning, deep learning, and moonshots.
-
-        I apply a range of qualitative and quantitative methods to comprehensively investigate the role of science and technology in the economy.
+        Open-source software carries vulnerability risks, and vulnerability reports play a crucial role in mitigating these risks. Typically, the vulnerability report denotes the affected and unaffected versions of a software. However, despite the validation by the security expert who discovers and the vendor who reviews, the listed (un)affected versions are not always accurate. The complexity of inaccurately identifying the (un)affected versions increased significantly when dealing with multiple versions and their differences.
         
-        Please reach out to collaborate 😃
+        ![Description of Image](visionlogo.png)
+        
     design:
       columns: '1'
+
   - block: collection
     id: papers
     content:
-      title: Featured Publications
+      title: Vision Module
       filters:
         folders:
           - publication
-        featured_only: true
+        featured_only: false
     design:
       view: article-grid
-      columns: 2
+      columns: 3
+
   - block: collection
     content:
-      title: Recent Publications
+      title: Baseline and Codes
       text: ""
       filters:
         folders:
