@@ -1,0 +1,252 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{xeCJK}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{url}
+\usepackage{fontawesome5}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+% \input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{0pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+% \pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \vspace{-4pt} 
+  \item\small{
+    \textbf{#1}{ #2 \vspace{0pt}}
+  }
+}
+
+\newcommand{\resumeItemm}[2]{
+  \vspace{-4pt} 
+  \item\small{
+    \textbf{#1}{ #2 \vspace{0pt}}
+  }
+}
+
+% Just in case someone needs a heading that does not need to be in a list
+\newcommand{\resumeHeading}[4]{
+    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{0pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{0pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{0pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{0pt}}
+\newcommand{\resumeSubItemm}[2]{\resumeItemm{#1}{#2}\vspace{4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+
+\newcommand{\resumeItemmListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeItemmListEnd}{\end{itemize}\vspace{0pt}}
+
+
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://catch22out.github.io}{\Large 吴苏晟}} & Email：\href{mailto:scwu24@m.fudan.edu.cn}{scwu24@m.fudan.edu.cn}\\
+  & 个人主页：\href{https://catch22out.github.io}{https://catch22out.github.io/}  \\
+  &手机 : 159-8889-1592 \\ &微信 : a980823049 \\
+ 交叉二号学科楼D2006室 \\ 上海市杨浦区淞沪路2205号 \\
+
+  % & Mobile : \href{tel:+11234567890}{+86-1-456-7890} \\
+\end{tabular*}
+
+\vspace{10pt}
+%-----------Intro-----------------
+吴苏晟，复旦大学计算机科学与智能创新学院博士生。主要研究领域为大模型供应链治理、软件供应链治理。主要研究兴趣为大模型赋能的代码质量保障以及大模型的风险治理。2022年9月加入复旦大学计算机科学技术学院，导师为\href{https://chenbihuan.github.io/}{\textbf{陈碧欢副教授}}，复旦大学软件学院副院长；同年加入复旦大学软件工程实验室团队（CodeWisdom团队）。
+
+
+
+%-----------EDUCATION-----------------
+\section{教育经历}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {复旦大学}{上海}
+      {计算机科学与技术，博士}{2022年9月-2027年6月（预计）} \\
+      % \vspace{8pt}
+    \resumeSubheading
+      {四川大学}{成都}
+      {网络空间安全，学士}{2018年9月-2022年6月}
+  \resumeSubHeadingListEnd
+
+
+
+\section{项目经历}
+\subsection*{漏洞知识库质量增强工具}
+研究基于多源知识与静态分析的开源漏洞质量增强技术，构建高可信与可解释的垂直领域知识基座，以解决大语言模型在软件供应链安全应用中的幻觉与数据时效性问题。
+\resumeItemListStart
+  \resumeItem{基于多维知识的漏洞影响组件识别工具 \textnormal{核心参与 | ICSE'24 （CCF-A）一作}}\\
+    {针对开源漏洞影响组件信息缺失或不准确的问题，融合NVD、GitHub Advisory等多源漏洞知识，设计基于多维知识关联与跨生态映射的漏洞影响组件自动识别方法，为CVE、GitHub、GitLab等漏洞知识库提升了200余个漏洞条目的组件归属信息的覆盖率与准确性。}
+  \resumeItem{基于静态分析的漏洞影响组件版本识别工具 \textnormal{核心参与 | ASE'24 （CCF-A）一作 \& TOSEM'26 （CCF-A）一作 (大修)}}\\
+    {针对漏洞影响版本范围标注粗粒度、不精确的问题，结合补丁代码静态分析与版本演化追踪技术，实现漏洞影响组件受影响版本的细粒度自动化识别，在CVE、GitHub与GitLab三个漏洞知识库中累计增强了300余个Java，C/C++漏洞条目的版本信息，为软件成分分析（SCA）提供了精准的版本级漏洞匹配能力。}
+  \resumeItem{基于语义增强的漏洞补丁关键变更识别工具 \textnormal{核心参与 | TOSEM'26 （CCF-A）一作 (大修)}}\\
+    {针对漏洞补丁中混杂大量非安全相关改动、阻碍下游分析的问题，提出基于语义增强的补丁关键变更自动识别方法，从复杂补丁中精准提取与漏洞修复直接相关的核心代码变更，有效提升漏洞检测与补丁迁移等下游基于大模型的垂域分析任务的效率与准确性。}
+\resumeItemListEnd
+
+\subsection*{基于大模型的漏洞检测与测试用例生成工具}
+研究融合大语言模型与静态分析的漏洞检测与测试用例生成技术，涵盖源代码漏洞检测、同源漏洞检测与漏洞PoC自动生成，提升漏洞发现与验证的效率与准确性。
+\resumeItemListStart
+  \resumeItem{基于语义编织的大模型漏洞检测工具 \textnormal{核心参与 | 华为内部网络安全实验室}}\\
+    {针对现有源代码漏洞检测方法中静态分析构建的程序表示不精确、提取的漏洞上下文不完整以及大模型推理不透明问题，提出基于语义编织的漏洞检测方法VulWeaver，通过融合确定性规则与大模型语义推理构建增强统一依赖图，结合程序切片提取完整漏洞上下文，并采用元提示框架驱动基于漏洞类型的专家级推理。在CrossVul数据集上F1值达0.75，较最优基线提升14\%--53\%；在9个真实Java项目中发现26个漏洞，其中15个获开发者确认，5个获CVE编号。}
+  \resumeItem{基于静态分析的同源漏洞检测工具 \textnormal{核心参与 | 华为胡杨林专项 | ISSTA'25 (CCF-A) 二作}}\\
+    {针对代码复用导致的同源漏洞检测中现有方法在多样化变体类型下效果不佳的问题，构建包含4,569个同源漏洞的大规模基准数据集（较已有数据集扩充953\%），系统评估现有方法的局限性，并提出基于过程间污点分析与过程内依赖切片的细粒度漏洞签名生成方法AntMan，结合灵活的图匹配策略实现高精度同源漏洞检测，精确率0.84、召回率0.85，成功检测4,593个同源漏洞（307个经开发者确认），发现73个0-day漏洞，5个获CVE编号。}
+  \resumeItem{基于选项感知定向模糊测试的漏洞PoC生成工具 \textnormal{核心参与 | FSE'26（CCF-A） 一作 （大修）}}\\
+    {针对静态分析工具发现的潜在漏洞缺乏可复现PoC验证的问题，提出选项感知的定向灰盒模糊测试工具CoupleFuzz，将PoC输入重新定义为选项输入与文件输入的组合，通过静态分析提取选项知识并动态推断选项有效性，采用交叉引导策略协调选项变异与文件变异，显著提升漏洞PoC生成的效率与可达性。较最优定向灰盒模糊测试基线多生成15个PoC（3.1倍提升），目标位置到达速度平均加速5.6倍，发现6个0-day漏洞获开发者确认，1个获CVE编号。}
+\resumeItemListEnd
+
+
+\subsection*{基于语义与句法增强的LLM自动化漏洞补丁迁移工具}
+针对开源软件多分支管理中漏洞补丁因分支间代码差异无法直接迁移、现有方法在漏洞语义理解与代码结构解析上存在不足的问题，提出基于语义与句法增强的LLM自动化漏洞补丁迁移方法Mystique，实现漏洞补丁的精准迁移，已集成至华为OpenEuler社区并在中科院软件所落地应用。
+\resumeItemListStart
+  \resumeItem{基于语义与句法增强的LLM自动化漏洞补丁迁移工具 \textnormal{核心参与 | 中科院软件所 | 华为OpenEuler | FSE'25 （CCF-A） 一作 (\,\faAward\; ACM SIGSOFT Distinguished Paper Award) | CCF软件原型大赛 二等奖 (第一完成人)}}\\
+    {针对现有补丁迁移方法忽略漏洞相关语义上下文或引入无关代码的不足，提出通过漏洞语义切片与句法正确性保证提取原始修复函数与目标漏洞函数签名，结合微调大语言模型生成修复函数并经迭代校验与精化确保迁移质量。在函数级与CVE级补丁迁移成功率分别达95.4\%与92.4\%，较现有最优方法分别提升至少13.2\%与12.3\%，成功为34个真实世界漏洞分支完成补丁迁移。Mystique开源版本已集成至华为OpenEuler社区，在降低90\%人工成本的同时提升社区10\%的漏洞补丁迁移成功率，并收到社区感谢信；Mystique及其工具链亦已在中科院软件所落地应用。}
+\resumeItemListEnd
+
+
+\subsection*{大模型供应链质量保障方法}
+研究面向开源大模型供应链的风险度量与依赖恢复技术，涵盖大模型供应链的使用、演化、质量与风险的系统性分析以及模型依赖关系的自动化恢复，为大模型供应链的安全可信治理提供基础性技术支撑。
+\resumeItemListStart
+  \resumeItem{面向开源大模型供应链的系统性风险分析 \textnormal{核心参与 | ICSE'26 （CCF-A）通讯作者}}\\
+    {构建了首个基于Hugging Face的大规模模型供应链（涵盖182万个模型与54万条依赖关系），从使用、演化、质量与风险四个维度开展首个系统性实证研究。发现31\%的模型具有依赖关系但贡献了88\%的下载量，83\%的模型缺失性能指标，且微调、量化、合并等不同变换操作对幻觉、越狱、提示注入等风险具有差异化传播效应，为模型供应链各利益相关方提供了可操作的治理建议。}
+  \resumeItem{面向大模型供应链的模型依赖恢复工具 \textnormal{核心参与 | 科技部2030重大项目 | ISSTA'26 （CCF-A）一作 (在投)}}\\
+    {通过基于连通性的模型聚类处理开放式依赖拓扑，并采用分治策略利用类型特异性指纹实现量化、合并与微调三种依赖类型的精准识别。构建首个涵盖137个真实模型与131条依赖边的基准数据集MDGBench。在聚类任务上ARI达0.96（较最优基线提升39\%），依赖识别$DF_1$达0.82（较最优基线提升193\%）。应用于289个孤立模型，成功恢复189条缺失依赖关系，其中42条经模型作者确认。}
+\resumeItemListEnd
+
+
+\subsection*{面向大模型的漏洞成员推理工具}
+研究面向代码大语言模型的漏洞代码成员推断技术，通过融合静态分析与模型内部概率及输出表征，判断特定漏洞代码是否属于模型训练数据，为大模型生成代码的安全溯源与风险治理提供技术支撑。
+\resumeItemListStart
+  \resumeItem{基于融合特征的漏洞代码成员推理工具 \textnormal{核心参与 | USENIX Security'26 （CCF-A）一作 (在投)}}\\
+    {针对现有代码成员推断方法难以区分漏洞代码与其修复版本的问题，提出基于融合特征的漏洞代码成员推理方法VulInception。通过构建抽象语法树并基于数据与控制依赖进行细粒度程序切片，精准定位漏洞相关代码节点；设计局部确定性-残差文档频率（LD-RDF）度量以量化代码token的平凡性，校准模型输出概率以过滤非记忆性信号；采用语句级迭代代码补全策略缓解一次性补全的语义遗忘问题；最终融合校准概率表示与代码图表示，通过双分支自注意力分类器实现漏洞代码成员与非成员的精准判别。}
+\resumeItemListEnd
+
+
+\subsection*{软件供应链安全风险治理}
+\resumeItemListStart
+\resumeItem{伏羲：软件供应链风险治理平台 \textnormal{核心参与 | 复旦大学软件工程实验室自研风险治理平台}}\\
+    {包括功能：开源软件安全漏洞分析、开源漏洞可达性分析、软件版本升级推荐。构建数据库：913万个Java版本库、1200万个Go版本库、300万个Python版本库、1亿个JavaScript版本库、19万条CVE数据。迄今已发现PyPI生态恶意软件包333个，NPM生态恶意软件包208个。相关成果在与\textbf{华为}等企业开展的合作项目中得到了成功应用。}
+\resumeItemListEnd
+
+
+\newpage
+\section{主要学术论文}
+\resumeItemListStart
+
+\resumeItem{Identifying Affected Libraries and Their Ecosystems for Open Source Software Vulnerabilities. (CCF-A)}\\
+{\textbf{Susheng Wu}, Wenyan Song, Kaifeng Huang, Bihuan Chen*, Xin Pen. In Proceedings of the 46th IEEE/ACM
+International Conference on Software Engineering, Lisbon, Portugal, 2024.}
+
+\resumeItem{Vision: Identifying affected library versions for open source software vulnerabilities (CCF-A)}\\
+{\textbf{Susheng Wu}, Ruisi Wang, Kaifeng Huang*, Yiheng Cao, Wenyan Song, Zhuotong Zhou, Yiheng Huang, Bihuan Chen* and Xin Peng. In Proceedings of the 39th IEEE/ACM International Conference on Automated Software Engineering, Sacramento, California, United States, 2024}
+
+\resumeItem{CoCoPat: Identifying Critical Changes in Vulnerability Patches (CCF-A)}\\
+{\textbf{Susheng Wu}, Yiheng Cao, Xin Hu, Zhuotong Zhou, Bihuan Chen*, Ruisi Wang, Yiheng Huang, Kaifeng Huang, and Xin Peng. ACM Transactions on Software Engineering and Methodology, 2026. (In Revision)}
+
+\resumeItem{VisionPro: Identifying affected library versions for open source software vulnerabilities (CCF-A)}\\
+{\textbf{Susheng Wu}, Yiheng Cao, Kaifeng Huang, Zhang Chen, Bihuan Chen, Yihao Chen, Ruisi Wang, Zhuotong Zhou, Yiheng Huang, Xin Hu, Wenyan Song, and Xin Peng. ACM Transactions on Software Engineering and Methodology, 2026. (In Revision)}
+
+\resumeItem{Recurring Vulnerability Detection: How Far Are We? (CCF-A)}\\
+{Yiheng Cao, \textbf{Susheng Wu}, Ruisi Wang, Yiheng Huang, Chenhao Lu, Zhuotong Zhou, Xin Peng. In the proceedings of the 34th ACM SIGSOFT International Symposium on Software Testing and Analysis, Trondheim, Norway.}
+
+\resumeItem{It Takes Two: Option-Aware Directed Greybox Fuzzing for Vulnerability PoC Generation. (CCF-A)}\\
+{\textbf{Susheng Wu}, Xin Hu, Yiheng Cao, Zhuotong Zhou, Yiheng Huang, Yijian Wu, Bihuan Chen, Zhijia Zhao, Xin Peng. In Proceedings of the 35th ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering, Montreal, Canada. (In Revision)}
+
+\resumeItem{Mystique: Automated Vulnerability Patch Porting with Semantic and Syntactic-Enhanced LLM (CCF-A)}\\
+{\textbf{Susheng Wu}, Ruisi Wang,  Yiheng Cao, Bihuan Chen, Zhuotong Zhou, Yiheng Huang, Junpeng Zhao, Xin Peng. In Proceedings of the 34th ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering, Trondheim, Norway. \\ \textbf{\,\faAward\; ACM SIGSOFT Distinguished Paper Award}}
+
+\resumeItem{A First Look at Model Supply Chain: From the Risk Perspective (CCF-A, Corresponding Author)}\\
+{Ziqian Chen, Zekai Chen, \textbf{Susheng Wu$^*$}, Bihuan Chen, Wenyan Song, Xin Peng.
+In Proceedings of the 48th IEEE/ACM International Conference on Software Engineering, Rio de Janeiro, Brazil, 2026.}
+
+\resumeItem{Recovering Model Dependency for Model Supply Chain (CCF-A)}\\
+{\textbf{Susheng Wu}, Ziqian Chen, Chengyuan Li, Kaifeng Huang, Zekai Chen, Yijian Wu, Bihuan Chen, Yiheng Cao, Zhuotong Zhou, Yiheng Huang, Xin Peng. (Under Review at ISSTA'26)}
+
+
+\resumeItem{VulInception: Vulnerability Membership Inference for LLMs (CCF-A)}\\
+{\textbf{Susheng Wu}, Zekai Chen, Kaifeng Huang, Ziqian Chen, Bihuan Chen, Yiheng Cao, Zhuotong Zhou, Yiheng Huang, Xin Peng. (Under Review at USENIX Security'26)}
+
+\resumeItemListEnd
+
+
+\section{成果奖项与学术服务}
+
+\resumeSubHeadingListStart
+\resumeSubItemm{漏洞知识库质量增强成果：}{知识库漏洞组件知识补全 * 214个CVE；知识库漏洞影响版本范围精度提升 * 309个CVE；}\\
+\resumeSubItemm{基于大模型的漏洞挖掘成果：}{0-Day * 187； CVE-ID * 23；}\\
+\resumeSubItemm{基于大模型的程序自动化修复成果：}{ACM SIGSOFT Distinguished Paper Award；CCF软件原型大赛二等奖；0-Day项目分支补丁合入 * 34；}\\
+\resumeSubItemm{面向开源大模型的生态治理成果：}{大模型缺失依赖关系恢复 * 189；其中43个依赖缺失模型为HF下载量Top 1,000；}\\
+\resumeSubItemm{学术报告：}{2024年 CCF 开源生态与软件供应链研讨会; 2025年CCF软件大会 开源供应链安全分析前沿研究论坛；}\\
+\resumeSubItemm{学业奖学金：}{国家奖学金*1； 腾讯奖学金*1； 华为冠名奖学金*1； 董式冠名奖学金*1； 校级奖学金*3}\\
+\resumeSubHeadingListEnd
+
+
+%--------PROGRAMMING SKILLS------------
+\section{技能}
+\resumeItemListStart
+  \resumeItem{程序语言： }{Java, Python, C/C++, Bash, Latex.}
+  \resumeItem{程序分析开发工具： }{Tree-Sitter, Joern, Soot, SVF, Git.}
+  \resumeItem{深度学习开发工具： }{Pytorch, Tensorflow, vLLM.}
+  \resumeItem{外语： }{CET4， CET6}
+\resumeItemListEnd
+
+\end{document}
