@@ -26,17 +26,43 @@
           alt="">
       </div>
     {% endif %}
-    <h3 class="archive__item-title" itemprop="headline">
-      {% if post.link %}
-        <a href="{{ post.link }}">{{ title }}</a> <a href="{{ base_path }}{{ post.url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
-      {% else %}
-        <a href="{{ base_path }}{{ post.url }}" rel="permalink">{{ title }}</a>
+    {% if post.collection == 'publications' %}
+      <p class="archive__item-title" itemprop="headline" style="font-size: 1.1em; font-weight: bold; margin-bottom: 0 !important; margin-top: 0 !important; color: #1e3a5f;">
+        {{ title }}{% if post.ccf_level %} <span style="color: #8b2d2d;">({{ post.ccf_level }})</span>{% endif %}
+      </p>
+      {% if post.venue %}
+        <p style="margin-bottom: 0 !important; margin-top: 0 !important;">
+          {% if post.location %}
+            In Proceedings of the {{ post.venue }}, {{ post.location }}, {{ post.year }}.
+          {% else %}
+            {{ post.venue }}, {{ post.year }}.
+          {% endif %}
+          {% if post.status %}({{ post.status }}){% endif %}
+          {% if post.award %}<br /><strong>🏆 {{ post.award }}</strong>{% endif %}
+        </p>
       {% endif %}
-    </h3>
-    {% if post.read_time %}
-      <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
+      {% if post.authors %}
+        <p style="font-style: italic; margin-bottom: 1em !important; margin-top: 0 !important;">
+          {% assign authors_array = post.authors | split: ", " %}
+          {% for author in authors_array %}
+            {% assign author_trimmed = author | strip %}
+            {% if author_trimmed contains "Susheng Wu" %}
+              <strong>{{ author_trimmed }}</strong>{% unless forloop.last %}, {% endunless %}
+            {% else %}
+              {{ author_trimmed }}{% unless forloop.last %}, {% endunless %}
+            {% endif %}
+          {% endfor %}
+        </p>
+      {% endif %}
+    {% else %}
+      <h3 class="archive__item-title" itemprop="headline">
+        {{ title }}
+      </h3>
+      {% if post.read_time %}
+        <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
+      {% endif %}
+      {% if post.venue%}<p class="archive__item-excerpt" itemprop="description">{{ post.citation }}</p> {% endif %}
     {% endif %}
-    {% if post.venue%}<p class="archive__item-excerpt" itemprop="description">{{ post.citation }}</p> {% endif %}
     </li>
  </article>
 </div>
