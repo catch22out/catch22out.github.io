@@ -99,6 +99,13 @@ redirect_from:
       </p>
     </div>
 
+    <div style="padding: 1em; background: #f8f9fa; border-radius: 6px;">
+      <p style="margin: 0; line-height: 1.6;">
+        <i class="fas fa-file-alt" style="color: #8b2d2d; margin-right: 0.5em;"></i>
+        <strong>FSE 2026 Paper (First Author)</strong>: "It Takes Two: Option-Aware Directed Greybox Fuzzing for Vulnerability PoC Generation" (CoupleFuzz)
+      </p>
+    </div>
+
   </div>
 </div>
 
