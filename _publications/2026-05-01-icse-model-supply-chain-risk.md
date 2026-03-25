@@ -6,6 +6,7 @@ permalink: /publication/2026-05-01-icse-model-supply-chain-risk
 date: 2026-05-01
 ccf_level: "CCF-A"
 corresponding: true
+author_role: "corresponding"
 authors: "Ziqian Chen, Zekai Chen, Susheng Wu*, Bihuan Chen, Wenyan Song, Xin Peng"
 venue: "48th IEEE/ACM International Conference on Software Engineering"
 location: "Rio de Janeiro, Brazil"
