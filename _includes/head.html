@@ -13,9 +13,12 @@
 
 <script>
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  try { localStorage.setItem("theme", "light"); } catch (e) {}
+  document.documentElement.removeAttribute("data-theme");
 </script>
 
 <!-- For all browsers -->
 <link rel="stylesheet" href="{{ base_path }}/assets/css/main.css">
+<style>#theme-toggle { display: none !important; }</style>
 
 <meta http-equiv="cleartype" content="on">
