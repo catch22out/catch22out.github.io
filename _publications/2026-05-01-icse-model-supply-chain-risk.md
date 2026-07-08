@@ -4,7 +4,7 @@ collection: publications
 category: conferences
 permalink: /publication/2026-05-01-icse-model-supply-chain-risk
 date: 2026-05-01
-ccf_level: "CCF-A"
+ccf_level: "CCF-A, Corresponding Author"
 corresponding: true
 author_role: "corresponding"
 authors: "Ziqian Chen, Zekai Chen, Susheng Wu*, Bihuan Chen, Wenyan Song, Xin Peng"

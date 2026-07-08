@@ -9,5 +9,4 @@ author_role: "first"
 authors: "Susheng Wu, Yiheng Cao, Xin Hu, Zhuotong Zhou, Bihuan Chen*, Ruisi Wang, Yiheng Huang, Kaifeng Huang, Xin Peng"
 venue: "ACM Transactions on Software Engineering and Methodology"
 year: 2026
-status: "In Revision"
 ---

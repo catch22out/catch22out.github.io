@@ -1,5 +1,5 @@
 ---
-title: "TensorLock: Type-aware Recovery of Dependencies in Model Supply Chain"
+title: "TensorLock: Recovering Model Dependency for Model Supply Chain"
 collection: publications
 category: conferences
 permalink: /publication/2026-10-03-issta-tensorlock

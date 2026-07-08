@@ -69,7 +69,7 @@ Research on risk measurement and dependency recovery technologies for open-sourc
 ## Publications
 
   {% assign sorted_pubs = site.publications | sort: "date" | reverse %}
-  {% assign author_roles = "first,corresponding,second" | split: "," %}
+  {% assign author_roles = "first,corresponding,second,other" | split: "," %}
   <ul>{% for role in author_roles %}
     {% for post in sorted_pubs %}
       {% if post.author_role != role %}
